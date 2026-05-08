@@ -389,7 +389,7 @@ ORDER BY total_spent DESC;
 ```
 
 ```sql
--- Rank customers by their total spending (highest = rank 1) using a window function.
+-- 24.Rank customers by their total spending (highest = rank 1) using a window function.
 SELECT c.name,
        SUM(o.total_amount) AS total_spent,
        RANK() OVER (ORDER BY SUM(o.total_amount) DESC) AS spend_rank
